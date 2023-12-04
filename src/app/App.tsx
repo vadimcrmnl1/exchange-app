@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {SimpleBackdrop} from "../common/components/Backdrop/Backdrop";
+import {Header} from "../common/components/Header/Header";
+import {Currencies} from "../features/Currencies/Currencies";
+import {useAppSelector} from "../hooks/hooks";
+import {selectIsLoading} from "./app-selectors";
+import s from './App.module.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export function App() {
+    const isLoading = useAppSelector(selectIsLoading)
+
+    return (
+        <div className={s.app}>
+            <Header/>
+            {isLoading && <SimpleBackdrop/>}
+            <Currencies/>
+        </div>
+    );
 }
 
-export default App;

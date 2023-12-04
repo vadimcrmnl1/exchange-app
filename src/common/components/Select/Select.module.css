@@ -1,0 +1,11 @@
+.selectContainer {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.select {
+    min-width: 80%;
+}
+

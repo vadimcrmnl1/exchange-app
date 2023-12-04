@@ -3,6 +3,7 @@
   height: 50px;
   background-color: #d7d6d6;
   position: fixed;
+  z-index: 99;
 
 }
 .desc_block {
@@ -11,4 +12,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+}
+.currBlock {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
 }
